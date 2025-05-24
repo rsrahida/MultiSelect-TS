@@ -1,0 +1,141 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e0ecff;
+}
+
+.select-container {
+  position: relative;
+  width: 400px;
+  margin: 10px 0;
+}
+
+.select-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 44px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.select-input:hover {
+  border-color: #888;
+  box-shadow: 0 0 0 3px rgba(100, 149, 237, 0.2);
+}
+
+.select-input.open {
+  border-color: #6495ed;
+}
+
+.placeholder {
+  color: #aaa;
+}
+
+.selected-values {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  flex: 1;
+}
+
+.selected-item {
+  background-color: #e0ecff;
+  padding: 4px 8px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  margin-left: 6px;
+  font-size: 16px;
+  color: #555;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.remove-btn:hover {
+  color: #d33;
+}
+
+.arrow {
+  font-size: 12px;
+  margin-left: 10px;
+  color: #777;
+}
+
+.options-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 240px;
+  overflow-y: auto;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 4px;
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  padding: 8px 0;
+}
+
+.search-input {
+  width: 90%;
+  margin: 0 auto 8px;
+  display: block;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #6495ed;
+  box-shadow: 0 0 0 2px rgba(100, 149, 237, 0.2);
+}
+
+.option-item {
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.option-item:hover {
+  background-color: #f0f4ff;
+}
+
+.option-item.selected {
+  background-color: #dbe9ff;
+  font-weight: 600;
+  color: #3366cc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkmark {
+  margin-left: 8px;
+  color: #3366cc;
+}
+
+.no-options {
+  padding: 12px 14px;
+  color: #999;
+  text-align: center;
+  font-style: italic;
+}
