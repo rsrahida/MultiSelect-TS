@@ -10,9 +10,9 @@ const Select: React.FC<SelectProps> = ({
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [search, setSearch] = useState("");
+
   //*İstifadəçi Select komponentindən kənara klik etsə,dropdown menyu bağlansın deye
   const containerRef = useRef<HTMLDivElement>(null);
-
   const filteredOptions = options.filter((opt) =>
     opt.label.toLowerCase().includes(search.toLowerCase())
   );
@@ -41,6 +41,7 @@ const Select: React.FC<SelectProps> = ({
     }
   };
 
+  //*deyisdirmek ucun
   const toggleOption = (option: Option) => {
     if (multiple) {
       if (!Array.isArray(value)) return;
